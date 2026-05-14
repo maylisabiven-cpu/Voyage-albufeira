@@ -261,9 +261,10 @@ DAYS.forEach(function(day){
     var coords=day.stops.map(function(s){return[s.lat,s.lng];});
     dayPolylines[day.id]=L.polyline(coords,{color:day.color,weight:3.5,opacity:0.9});
   }
+  var dayStopNum=0;
   day.stops.forEach(function(stop){
-    stopNum++;
-    var num=stopNum;
+    dayStopNum++;
+    var num=dayStopNum;
     var icon=L.divIcon({
       className:'',
       html:'<div class="num-marker" style="background:'+day.color+'">'+num+'</div>',
