@@ -27,6 +27,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .popup-emoji{font-size:1.1rem;display:block;margin-bottom:4px}
 .popup-name{font-weight:700;font-size:14px;color:#1a3a4a;margin-bottom:3px}
 .popup-day{color:#88aabb;font-size:12px}
+.popup-detail{color:#555;font-size:11px;margin-bottom:3px;font-style:italic}
 
 .tabs-wrap{background:#e4f3fb;padding:10px 14px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;border-bottom:2px solid #b0d8f0;position:sticky;top:0;z-index:100}
 .tabs-wrap::-webkit-scrollbar{display:none}
@@ -77,7 +78,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div class="hero-palm">🌴</div>
   <span class="hero-flag">🇵🇹</span>
   <div class="hero-title">Voyage à<br>Albufeira</div>
-  <div class="hero-names">Les filles 🌊</div>
+  <div class="hero-names">Maylis, Arthur, Céleste et Laure 🌊</div>
   <div class="hero-dates">24 mai — 31 mai 2026</div>
 </div>
 
@@ -100,10 +101,9 @@ var DAYS = [
   {id:1,dateLabel:"24 mai",dayNum:"24",month:"MAI",weekday:"Samedi 24 mai",location:"Albufeira",color:"#ff6b35",
    budget:{total:"51",lines:[{l:"Taxi arrivée",a:"6 €"},{l:"Courses",a:"25 €"},{l:"Soirée bars",a:"20 €"}]},
    stops:[
-     {lat:37.0892,lng:-8.2506,name:"Appartement / Arrivée",emoji:"🏠"},
-     {lat:37.0860,lng:-8.2490,name:"Albufeira Old Town",emoji:"🏘️"},
-     {lat:37.0848,lng:-8.2513,name:"Praia dos Pescadores",emoji:"🌊"},
-     {lat:37.0858,lng:-8.2497,name:"Rua Cândido dos Reis",emoji:"🍹"}
+     {lat:37.0178,lng:-7.9658,name:"Aéroport de Faro",detail:"Départ taxi → Rua do Pacífico, Ed Elymar Apt 202, Albufeira",emoji:"✈️"},
+     {lat:37.0892,lng:-8.2506,name:"Appartement",detail:"Rua do Pacífico, Ed Elymar Apt 202, Albufeira 8200-161",emoji:"🏠"},
+     {lat:37.0860,lng:-8.2490,name:"Albufeira Old Town",detail:"Vieille ville — bars & balades",emoji:"🏘️"}
    ],
    acts:[
      {i:"✈️",n:"Départ 18h00 — arrivée 19h15",d:"Taxi depuis l'aéroport",p:"6 €/pers",c:"#0088bb"},
@@ -119,11 +119,12 @@ var DAYS = [
   {id:2,dateLabel:"25 mai",dayNum:"25",month:"MAI",weekday:"Dimanche 25 mai",location:"Albufeira",color:"#00b388",
    budget:{total:"44",lines:[{l:"Bus São Rafael A/R",a:"4 €"},{l:"Soirée The Strip",a:"20 €"},{l:"Divers",a:"20 €"}]},
    stops:[
-     {lat:37.0892,lng:-8.2506,name:"Appartement",emoji:"🏠"},
-     {lat:37.0792,lng:-8.2772,name:"Marina de Albufeira",emoji:"⛵"},
-     {lat:37.0733,lng:-8.2968,name:"Praia de São Rafael",emoji:"🏖️"},
-     {lat:37.0718,lng:-8.3015,name:"Praia da Coelha",emoji:"🏖️"},
-     {lat:37.0895,lng:-8.2360,name:"The Strip Albufeira",emoji:"🎉"}
+     {lat:37.0892,lng:-8.2506,name:"Appartement",detail:"Rua do Pacífico, Ed Elymar Apt 202, Albufeira 8200-161",emoji:"🏠"},
+     {lat:37.0792,lng:-8.2772,name:"Marina de Albufeira",detail:"Port de plaisance d'Albufeira",emoji:"⛵"},
+     {lat:37.0733,lng:-8.2968,name:"Praia de São Rafael",detail:"Crique encaissée — sable blanc",emoji:"🏖️"},
+     {lat:37.0718,lng:-8.3015,name:"Praia da Coelha",detail:"Petite plage tranquille",emoji:"🏖️"},
+     {lat:37.0892,lng:-8.2506,name:"Retour à l'appart",detail:"Rua do Pacífico, Ed Elymar Apt 202, Albufeira 8200-161",emoji:"🏠"},
+     {lat:37.0895,lng:-8.2360,name:"The Strip Albufeira",detail:"Rue festive — bars & clubs",emoji:"🎉"}
    ],
    acts:[
      {i:"🏊",n:"Piscine chill",d:null,p:null,c:"#0088bb"},
@@ -139,10 +140,11 @@ var DAYS = [
   {id:3,dateLabel:"26 mai",dayNum:"26",month:"MAI",weekday:"Lundi 26 mai",location:"Albufeira",color:"#0088bb",
    budget:{total:"117",lines:[{l:"Kayak + transport",a:"41 €"},{l:"Praia da Falésia",a:"6 €"},{l:"Water sport",a:"15 €"},{l:"Fast food",a:"10 €"},{l:"Boat party sunset",a:"45 €"}]},
    stops:[
-     {lat:37.0855,lng:-8.2520,name:"Kayak — Albufeira",emoji:"🚣"},
-     {lat:37.0972,lng:-8.1898,name:"Praia da Falésia",emoji:"🏖️"},
-     {lat:37.0820,lng:-8.2630,name:"Water Sport Center",emoji:"🌊"},
-     {lat:37.0792,lng:-8.2772,name:"Marina (Boat Party)",emoji:"🛥️"}
+     {lat:37.0892,lng:-8.2506,name:"Appartement",detail:"Rua do Pacífico, Ed Elymar Apt 202, Albufeira 8200-161",emoji:"🏠"},
+     {lat:37.0862,lng:-8.2558,name:"RDV Kayak",detail:"R. Da Torre Velha 2, Albufeira",emoji:"🚣"},
+     {lat:37.0972,lng:-8.1898,name:"Praia da Falésia",detail:"Falaises rouges & sable blanc",emoji:"🏖️"},
+     {lat:37.0820,lng:-8.2630,name:"Water Sport Center",detail:"Bouées tractées",emoji:"🌊"},
+     {lat:37.0711,lng:-8.1191,name:"Boat Party — Vilamoura",detail:"Quai 1, Marina de Vilamoura 25",emoji:"🛥️"}
    ],
    acts:[
      {i:"🚣",n:"Activité Kayak",d:"+ 6 € A/R",p:"35 €/pers",c:"#0088bb"},
@@ -157,10 +159,10 @@ var DAYS = [
   {id:4,dateLabel:"27 mai",dayNum:"27",month:"MAI",weekday:"Mardi 27 mai",location:"Albufeira",color:"#9c4dcc",
    budget:{total:"54",lines:[{l:"Bus Ninho de Andorinha A/R",a:"4 €"},{l:"Restaurant",a:"30 €"},{l:"Soirée",a:"20 €"}]},
    stops:[
-     {lat:37.0892,lng:-8.2506,name:"Appartement",emoji:"🏠"},
-     {lat:37.1137,lng:-8.3012,name:"Praia do Ninho de Andorinha",emoji:"🏖️"},
-     {lat:37.1040,lng:-8.3060,name:"Miradouro do Pau da Bandeira",emoji:"🌅"},
-     {lat:37.0860,lng:-8.2490,name:"Old Town / The Strip",emoji:"🎉"}
+     {lat:37.0892,lng:-8.2506,name:"Appartement",detail:"Rua do Pacífico, Ed Elymar Apt 202, Albufeira 8200-161",emoji:"🏠"},
+     {lat:37.1137,lng:-8.3012,name:"Praia do Ninho de Andorinha",detail:"Crique cachée",emoji:"🏖️"},
+     {lat:37.1040,lng:-8.3060,name:"Miradouro do Pau da Bandeira",detail:"Vue panoramique — coucher de soleil",emoji:"🌅"},
+     {lat:37.0895,lng:-8.2360,name:"The Strip Albufeira",detail:"Rue festive — bars & clubs",emoji:"🎉"}
    ],
    acts:[
      {i:"🏊",n:"Piscine le matin",d:null,p:null,c:"#0088bb"},
@@ -175,8 +177,8 @@ var DAYS = [
   {id:5,dateLabel:"28 mai",dayNum:"28",month:"MAI",weekday:"Mercredi 28 mai",location:"Albufeira → Vilamoura",color:"#f4a435",
    budget:{total:"27",lines:[{l:"Bus Vilamoura A/R",a:"4 €"},{l:"Croisière catamaran sunset",a:"23 €"}]},
    stops:[
-     {lat:37.0892,lng:-8.2506,name:"Appartement",emoji:"🏠"},
-     {lat:37.0711,lng:-8.1191,name:"Marina de Vilamoura",emoji:"⛵"}
+     {lat:37.0892,lng:-8.2506,name:"Appartement",detail:"Rua do Pacífico, Ed Elymar Apt 202, Albufeira 8200-161",emoji:"🏠"},
+     {lat:37.0711,lng:-8.1191,name:"Marina de Vilamoura",detail:"Croisière catamaran sunset",emoji:"⛵"}
    ],
    acts:[
      {i:"🌴",n:"Brunch / Piscine / Plage chill",d:null,p:null,c:"#f4a435"},
@@ -189,16 +191,17 @@ var DAYS = [
    tip:null},
 
   {id:6,dateLabel:"29 mai",dayNum:"29",month:"MAI",weekday:"Jeudi 29 mai",location:"Albufeira + Algarve",color:"#ff6b35",
-   budget:{total:"69",lines:[{l:"Bus Prainha A/R",a:"4 €"},{l:"Quad / Buggy",a:"45 €"},{l:"Bars",a:"20 €"}]},
+   budget:{total:"57",lines:[{l:"Bus Prainha A/R",a:"4 €"},{l:"Quad (33 €) ou Buggy",a:"33 €"},{l:"Bars",a:"20 €"}]},
    stops:[
-     {lat:37.0805,lng:-8.3155,name:"Praia da Prainha",emoji:"🏖️"},
-     {lat:37.1200,lng:-8.2800,name:"Arrière-pays — Quad",emoji:"🚙"},
-     {lat:37.0985,lng:-8.4020,name:"Praia da Marinha",emoji:"🌅"}
+     {lat:37.0892,lng:-8.2506,name:"Appartement",detail:"Rua do Pacífico, Ed Elymar Apt 202, Albufeira 8200-161",emoji:"🏠"},
+     {lat:37.0805,lng:-8.3155,name:"Praia da Prainha",detail:"Petite plage tranquille",emoji:"🏖️"},
+     {lat:37.0940,lng:-8.2560,name:"Magnibravura Off-Road",detail:"Rua da Escola Velha, 8200-592 Albufeira — Quad 33€ | Buggy 90€ | Jeep Safari 25€/pers",emoji:"🚙"},
+     {lat:37.0985,lng:-8.4020,name:"Praia da Marinha",detail:"Plage mythique — coucher de soleil",emoji:"🌅"}
    ],
    acts:[
      {i:"🚌",n:"Praia da Prainha",d:"Bus aller-retour",p:"4 €/pers",c:"#0088bb"},
      {i:"🧺",n:"Pique-nique",d:null,p:null,c:"#00b388"},
-     {i:"🚙",n:"Quad / Buggy arrière-pays Algarve",d:null,p:"45 €/pers",c:"#ff6b35"},
+     {i:"🚙",n:"Quad / Buggy arrière-pays Algarve",d:"Magnibravura Off-Road — Rua da Escola Velha, Albufeira",p:"33 €/pers (quad)",c:"#ff6b35"},
      {i:"🍳",n:"Repas à l'appart",d:null,p:null,c:"#90a4ae"},
      {i:"🌅",n:"Coucher de soleil à Praia da Marinha",d:"Plage mythique",p:null,c:"#ff6b35"},
      {i:"🍹",n:"Bars",d:null,p:"20 €/pers",c:"#e040fb"}
@@ -208,9 +211,9 @@ var DAYS = [
   {id:7,dateLabel:"30 mai",dayNum:"30",month:"MAI",weekday:"Vendredi 30 mai",location:"Albufeira → Lagos",color:"#00b388",
    budget:{total:"64–109",lines:[{l:"Excursion dauphins (optionnel)",a:"40 €"},{l:"Bus Praia do Camilo A/R",a:"4 €"},{l:"Soirée The Strip",a:"20 €"}]},
    stops:[
-     {lat:37.0892,lng:-8.2506,name:"Appartement",emoji:"🏠"},
-     {lat:37.0844,lng:-8.6656,name:"Praia do Camilo — Lagos",emoji:"🌅"},
-     {lat:37.0895,lng:-8.2360,name:"The Strip Albufeira",emoji:"🎉"}
+     {lat:37.0892,lng:-8.2506,name:"Appartement",detail:"Rua do Pacífico, Ed Elymar Apt 202, Albufeira 8200-161",emoji:"🏠"},
+     {lat:37.0844,lng:-8.6656,name:"Praia do Camilo",detail:"Lagos — plage mythique, coucher de soleil",emoji:"🌅"},
+     {lat:37.0895,lng:-8.2360,name:"The Strip Albufeira",detail:"Dernière soirée 🔥",emoji:"🎉"}
    ],
    acts:[
      {i:"🐬",n:"Excursion dauphins (optionnel)",d:"ou piscine chill",p:"40 €/pers",c:"#0088bb"},
@@ -224,8 +227,9 @@ var DAYS = [
   {id:8,dateLabel:"31 mai",dayNum:"31",month:"MAI",weekday:"Samedi 31 mai",location:"Albufeira — Retour",color:"#78909c",
    budget:{total:"31",lines:[{l:"Repas extérieur ×2",a:"20 €"},{l:"Transport retour aéroport",a:"11 €"}]},
    stops:[
-     {lat:37.0892,lng:-8.2506,name:"Appartement",emoji:"🏠"},
-     {lat:37.0860,lng:-8.2490,name:"Old Town — Shopping",emoji:"🛍️"}
+     {lat:37.0892,lng:-8.2506,name:"Appartement",detail:"Rua do Pacífico, Ed Elymar Apt 202, Albufeira 8200-161",emoji:"🏠"},
+     {lat:37.0860,lng:-8.2490,name:"Centre-ville Albufeira",detail:"Shopping souvenirs & balade",emoji:"🛍️"},
+     {lat:37.0178,lng:-7.9658,name:"Aéroport de Faro",detail:"Retour — départ 19h55",emoji:"✈️"}
    ],
    acts:[
      {i:"🌊",n:"Chill plage / Piscine",d:null,p:null,c:"#0088bb"},
@@ -264,8 +268,9 @@ DAYS.forEach(function(day){
     var m=L.marker([stop.lat,stop.lng],{icon:icon}).bindPopup(
       '<span class="popup-emoji">'+stop.emoji+'</span>'+
       '<div class="popup-name">'+stop.name+'</div>'+
+      (stop.detail?'<div class="popup-detail">'+stop.detail+'</div>':'')+
       '<div class="popup-day">'+day.weekday+'</div>',
-      {maxWidth:200}
+      {maxWidth:220}
     );
     allMarkers.push({marker:m,dayId:day.id});
   });
